@@ -779,8 +779,8 @@ body {
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  right: 0.5rem;
-  top: 0.75rem;
+  right: -1.5rem;
+  top: -0.5rem;
   background: #bb0000;
   border-radius: 2rem;
   font-size: 1rem;
@@ -1127,14 +1127,12 @@ body {
 }
 
 .btn-cart__top {
+  position: relative;
   width: 2rem;
   height: 2rem;
-  object-fit: contain;
 }
 .btn-cart__top_img {
   position: absolute;
-  top: 50%;
-  right: 1rem;
   transform: translate(0, -50%);
   width: 2rem;
   height: 2rem;
@@ -1358,11 +1356,11 @@ body {
 
 .background_pic {
   padding-top: 8rem;
-  padding-bottom: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: fit-content;
   gap: 2rem;
+  padding-bottom: 275px;
 }
 
 .messengers__heading {
@@ -1387,13 +1385,12 @@ body {
 
 .background-img__box {
   position: absolute;
-  margin-top: 10rem;
-  background-color: #FFC800;
+  bottom: 0;
+  width: 75hw;
 }
 .background-img__box > img {
-  left: 50%;
-  bottom: 0;
-  height: auto;
+  margin-top: 300px;
+  margin-bottom: -3px;
   width: 100%;
 }
 
@@ -1850,8 +1847,8 @@ body {
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  right: 0.5rem;
-  top: 0.75rem;
+  right: -1.5rem;
+  top: -0.5rem;
   background: #bb0000;
   border-radius: 2rem;
   font-size: 1rem;

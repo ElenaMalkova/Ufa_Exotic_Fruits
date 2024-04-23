@@ -89,13 +89,11 @@ $menuItemsQuantity: 3
 
 
 .btn-cart__top
+  position: relative
   width: 2rem
   height: 2rem
-  object-fit: contain
   &_img
     position: absolute
-    top: 50%
-    right: 1rem
     transform: translate(0, -50%)
     width: 2rem
     height: 2rem
@@ -303,11 +301,12 @@ $menuItemsQuantity: 3
 
 .background_pic
   padding-top: 8rem
-  padding-bottom: 0
+  position: relative
   display: flex
   flex-direction: column
-  height: fit-content
   gap: 2rem
+  padding-bottom: 275px
+
 
 .messengers
   &__heading
@@ -330,14 +329,11 @@ $menuItemsQuantity: 3
 
 .background-img__box
   position: absolute
-  margin-top: 10rem
-  background-color: $scAccent
-
-  > img
-    left: 50%
-    //transform: translate(-50%, 0)
-    bottom: 0
-    height: auto
+  bottom: 0
+  width: 75hw
+  & > img
+    margin-top: 300px
+    margin-bottom: -3px
     width: 100%
 
 .footer
