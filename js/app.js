@@ -40,10 +40,10 @@ const swiper = new Swiper('#product-swiper', {
   },
 });
 
-fetch("http://localhost:3000/products")
+fetch("http://localhost:8080/db/products.json")
   .then(response => response.json())
   .then(data => {
-    data.forEach(product => {
+    data.products.forEach(product => {
       // Check if product is in stock
       if (product.inStock === 0) {
         return; // Skip this product
