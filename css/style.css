@@ -675,9 +675,10 @@ details summary::-webkit-details-marker {
   font-size: 2rem;
   font-weight: 700;
 }
-.basic-price:before {
+.basic-price:after {
   content: "₽";
   font-family: "neue-haas-unica", sans-serif;
+  margin-left: 2px;
 }
 
 .price-in-button {
@@ -855,9 +856,6 @@ body {
   background-color: #FFC800;
   padding: 1rem;
 }
-.modal-content img {
-  max-width: 787.6923076923px;
-}
 
 .close-img-btn {
   display: block;
@@ -950,10 +948,90 @@ body {
   margin: 0;
 }
 
-.btn-cart {
-  position: relative;
-  width: 8rem;
-  height: 8rem;
+.order-item {
+  display: grid;
+  grid-template-columns: 5fr 12fr 5fr 4fr 1fr;
+  padding: 1rem 0;
+  gap: 1.5rem;
+  border-bottom: 1px solid #6d7a7a;
+}
+.order-item:last-child {
+  border-bottom: none;
+}
+.order-item__img-box {
+  border-radius: 1rem;
+  max-width: 5rem;
+  max-height: 5rem;
+  overflow: hidden;
+}
+.order-item__img {
+  max-width: 100%;
+  height: auto;
+}
+.order-item__product-name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: auto 0;
+}
+.order-item > .basic-price {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 1.75rem;
+  padding-bottom: 4px;
+}
+
+.quantity-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.quantity-value {
+  font-size: 1.75rem;
+  padding-bottom: 3px;
+}
+
+.quantity-btn {
+  padding: 0 0 6px 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border: 1px solid #2b2118;
+  border-radius: 3rem;
+  font-size: 2rem;
+  color: #2b2118;
+  transition: all 0.3s ease-out;
+}
+.quantity-btn:last-child {
+  padding: 0 0 5px 0;
+}
+.quantity-btn:hover {
+  background-color: #2b2118;
+  color: #fff;
+}
+
+.delete {
+  transition: all 0.3s ease-out;
+}
+.delete svg path {
+  fill: #6d7a7a;
+}
+.delete:hover > svg path {
+  fill: #bb0000;
+}
+
+.width_50pc {
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart_gap-tuner {
+  gap: 0;
+  padding-bottom: 1rem;
+  flex-direction: column;
 }
 
 .arrow-right, .arrow-left {
@@ -1743,9 +1821,10 @@ details summary::-webkit-details-marker {
   font-size: 2rem;
   font-weight: 700;
 }
-.basic-price:before {
+.basic-price:after {
   content: "₽";
   font-family: "neue-haas-unica", sans-serif;
+  margin-left: 2px;
 }
 
 .price-in-button {

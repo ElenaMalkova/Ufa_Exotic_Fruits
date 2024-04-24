@@ -40,7 +40,7 @@ const swiper = new Swiper('#product-swiper', {
   },
 });
 
-fetch("http://localhost:3000/products")
+fetch("db/products_web.json")
   .then(response => response.json())
   .then(data => {
     data.products.forEach(product => {
@@ -185,7 +185,7 @@ function populateModal(modalContent, product) {
 
   // Create and append the button Add to Cart
   let button = document.createElement('button');
-  button.innerHTML = `<span class="margin__none">Добавить в корзину</span><svg class="btn__cart" width="20" height="20" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+    button.innerHTML = `<span class="margin__none">Добавить в корзину</span><svg class="btn__cart" width="20" height="20" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
       '        <path d="M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2H5.59274C6.0537 2 6.45495 2.3151 6.56423 2.76293L11.2125 21.8106C11.5403 23.154 12.744 24.0993 14.1269 24.0993H28.0527C28.6049 24.0993 29.0527 23.6516 29.0527 23.0993C29.0527 22.5471 28.6049 22.0993 28.0527 22.0993H14.1269C13.666 22.0993 13.2647 21.7842 13.1554 21.3364L12.4376 18.395H29.0371C29.9273 18.395 30.7104 17.8066 30.9581 16.9515L33.5902 7.86552C33.9608 6.5863 33.001 5.30902 31.6692 5.30902H9.88892C9.67084 5.30902 9.46242 5.3434 9.26806 5.40659L8.50721 2.28878C8.17936 0.945304 6.97564 0 5.59274 0H1Z" fill="#869FA6" />\n' +
       '        <path d="M15.8599 29.9578C15.8599 31.6412 14.4952 33.006 12.8117 33.006C11.1283 33.006 9.76353 31.6412 9.76353 29.9578C9.76353 28.2743 11.1283 26.9096 12.8117 26.9096C14.4952 26.9096 15.8599 28.2743 15.8599 29.9578Z" fill="#869FA6" />\n' +
       '        <path d="M32.6249 29.9578C32.6249 31.6412 31.2602 33.006 29.5767 33.006C27.8933 33.006 26.5286 31.6412 26.5286 29.9578C26.5286 28.2743 27.8933 26.9096 29.5767 26.9096C31.2602 26.9096 32.6249 28.2743 32.6249 29.9578Z" fill="#869FA6" />\n' +

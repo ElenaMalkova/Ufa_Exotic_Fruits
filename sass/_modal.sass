@@ -41,8 +41,8 @@
     align-items: center
     background-color: $scAccent
     padding: 1rem
-  img
-    max-width: calc($desktopWidth / 1.3)
+  //img
+  //  max-width: calc($desktopWidth / 1.3)
 
 .close-img-btn
   display: block
@@ -88,9 +88,6 @@
   &:hover
     color: $scImportant
 
-// Конец модальных окон
-// ---------------------------------------------------------------------
-
 .fruits
   font-size: 1rem
   line-height: 1.125rem
@@ -100,8 +97,6 @@
 
 .show-modal
   cursor: pointer
-
-
 
 .mw-description
   &__content
@@ -135,13 +130,88 @@
     font-weight: $bold
     margin: 0
 
-//Кнопка корзинки
-.btn-cart
-  position: relative
-  width: 8rem
-  height: 8rem
-  //position: absolute
-  //top: 52%
-  //right: 1rem
-  //transform: translate(0, -50%)
-  //width: 1.25rem
+
+//Корзина покупок Окно заказов
+.order-item
+  display: grid
+  grid-template-columns: 5fr 12fr 5fr 4fr 1fr
+  padding: 1rem 0
+  gap: 1.5rem
+  border-bottom: 1px solid $scLinesLight
+  &:last-child
+    border-bottom: none
+
+  &__img-box
+    border-radius: 1rem
+    max-width: 5rem
+    max-height: 5rem
+    overflow: hidden
+  &__img
+    max-width: 100%
+    height: auto
+  &__product-name
+    font-weight: $medium
+    font-size: 1.5rem
+    margin: auto 0
+  > .basic-price
+    margin-top: auto
+    margin-bottom: auto
+    margin-left: auto
+    font-weight: $medium
+    font-size: 1.75rem
+    padding-bottom: 4px
+
+.quantity
+  &-box
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    align-items: center
+  &-value
+    font-size: 1.75rem
+    padding-bottom: 3px
+
+.quantity-btn
+  padding: 0 0 6px 0
+  width: 2rem
+  height: 2rem
+  background-color: $scBackground
+  border: 1px solid $tcMain
+  border-radius: 3rem
+  font-size: 2rem
+  color: $tcMain
+  transition: all 0.3s ease-out
+  &:last-child
+    padding: 0 0 5px 0
+  &:hover
+    background-color: $tcMain
+    color: $tcInverted
+
+
+.delete
+  transition: all 0.3s ease-out
+  svg
+    path
+      fill: $scLinesLight
+  &:hover > svg
+    path
+      fill: $scImportant
+.width_50pc
+  width: 50% !important
+  margin-left: auto
+  margin-right: auto
+
+.cart_gap-tuner
+  gap: 0
+  padding-bottom: 1rem
+  flex-direction: column
+////Кнопка корзинки
+//.btn-cart
+//  position: relative
+//  width: 8rem
+//  height: 8rem
+//  //position: absolute
+//  //top: 52%
+//  //right: 1rem
+//  //transform: translate(0, -50%)
+//  //width: 1.25rem
