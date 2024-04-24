@@ -43,7 +43,7 @@ const swiper = new Swiper('#product-swiper', {
 fetch("http://localhost:3000/products")
   .then(response => response.json())
   .then(data => {
-    data.products.forEach(product => {
+    data.forEach(product => {
       // Check if product is in stock
       if (product.inStock === 0) {
         return; // Skip this product
@@ -219,3 +219,12 @@ function populateModal(modalContent, product) {
     }
   });
 }
+
+fetch('http://localhost:8080/cart-window.html', {
+  method: 'GET',
+})
+  .then(response => response.text()) // получаем текст ответа
+  .then(html => {
+    document.querySelector('#cart').innerHTML = html; // вставляем HTML
+  })
+  .catch(err => console.log('An error happened: ', err)); // обрабатываем ошибки, если они есть
