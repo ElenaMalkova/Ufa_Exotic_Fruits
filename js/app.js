@@ -30,6 +30,13 @@ menuLinks.forEach(link => {
 });
 
 // Для свайпера
+// // import Swiper bundle with all modules installed
+// import Swiper from "swi"
+//
+// // import styles bundle
+// import 'swiper/css/bundle';
+
+// init Swiper:
 const swiper = new Swiper('#product-swiper', {
   loop: true,
   slidesPerView: 3,
