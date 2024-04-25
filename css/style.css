@@ -836,6 +836,19 @@ body {
   cursor: pointer;
 }
 
+.relative {
+  position: relative;
+}
+
+.link-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 .modal {
   display: none;
   align-items: center;
@@ -969,7 +982,7 @@ body {
 
 .order-item {
   display: grid;
-  grid-template-columns: 5fr 12fr 5fr 4fr 1fr;
+  grid-template-columns: 5fr 12fr 4fr 5fr 4fr 1fr;
   padding: 1rem 0;
   gap: 1.5rem;
   border-top: 1px solid #6d7a7a;
@@ -1014,6 +1027,8 @@ body {
 
 .delete {
   transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
 }
 .delete svg path {
   fill: #6d7a7a;
@@ -1479,6 +1494,18 @@ body {
   color: #fff;
   padding: 5rem 0;
   justify-content: center;
+}
+
+.cart__background {
+  background-color: rgba(33, 12, 1, 0.9);
+}
+
+.fit_img {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1981,6 +2008,19 @@ body {
 
 .pointer {
   cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.link-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .more-feedback {
