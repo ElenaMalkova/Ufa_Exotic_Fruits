@@ -992,8 +992,8 @@ body {
 }
 .order-item__img-box {
   border-radius: 1rem;
-  max-width: 5rem;
-  max-height: 5rem;
+  width: 5rem;
+  height: 5rem;
   overflow: hidden;
 }
 .order-item__img {
@@ -1019,10 +1019,16 @@ body {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
-.quantity-value {
-  font-size: 1.75rem;
+.quantity-chooser {
+  height: 2rem;
+  font-size: 1.5rem;
   padding-bottom: 3px;
+  box-sizing: border-box;
+  border: 1px solid #6d7a7a;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 .delete {

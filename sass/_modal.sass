@@ -146,8 +146,8 @@
 
   &__img-box
     border-radius: 1rem
-    max-width: 5rem
-    max-height: 5rem
+    width: 5rem
+    height: 5rem
     overflow: hidden
 
   &__img
@@ -173,10 +173,17 @@
     flex-direction: row
     gap: 1rem
     align-items: center
+    justify-content: center
 
-  &-value
-    font-size: 1.75rem
+  &-chooser
+    height: 2rem
+    font-size: 1.5rem
     padding-bottom: 3px
+    box-sizing: border-box
+    border: 1px solid $scLinesLight
+    border-radius: .25rem
+    padding-left: .25rem
+
 
 .delete
   transition: all 0.3s ease-out
